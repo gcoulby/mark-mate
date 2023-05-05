@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mark-mate/static/css/main.596461b9.css",
+    "main.js": "/mark-mate/static/js/main.d75a74c5.js",
+    "static/js/787.840159dc.chunk.js": "/mark-mate/static/js/787.840159dc.chunk.js",
+    "static/media/logo.png": "/mark-mate/static/media/logo.f214af25e299b748047a.png",
+    "index.html": "/mark-mate/index.html",
+    "main.596461b9.css.map": "/mark-mate/static/css/main.596461b9.css.map",
+    "main.d75a74c5.js.map": "/mark-mate/static/js/main.d75a74c5.js.map",
+    "787.840159dc.chunk.js.map": "/mark-mate/static/js/787.840159dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.596461b9.css",
+    "static/js/main.d75a74c5.js"
+  ]
+}
