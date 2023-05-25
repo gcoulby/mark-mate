@@ -10,7 +10,7 @@ function App() {
   const [defaultAvailable, setDefaultAvailable] = useState(0);
 
   const addMark = () => {
-    setMarks([...marks, { available: defaultAvailable, percentage: 0 }]);
+    setMarks([...marks, { available: defaultAvailable, awarded: 0, percentage: 0 }]);
   };
 
   const setMark = (index, key, value) => {
@@ -27,16 +27,29 @@ function App() {
     return total;
   };
 
+  const getTotalPercentage = () => {
+    let total = 0;
+    let totalAvailable = 0;
+    marks.forEach((mark) => {
+      total += mark.awarded;
+      totalAvailable += mark.available;
+    });
+    return Math.round((total / totalAvailable) * 100);
+  };
+
   return (
     <div className="">
       <Nav />
-      <img src={logo} className="" alt="logo" style={{ width: "20%", margin: "auto", display: "block" }} />
+      <img src={logo} className="" alt="logo" style={{ width: "10%", margin: "auto", display: "block" }} />
 
       <div className="container">
         <hr />
         <div className="row">
           <div className="col">
             <h1>Total Marks: {getTotalMarks()}</h1>
+          </div>
+          <div className="col">
+            <h1>Total Percentage: {getTotalPercentage()}%</h1>
           </div>
         </div>
         <hr />
@@ -66,8 +79,8 @@ function App() {
               <thead>
                 <tr>
                   <th scope="col">Marks Available</th>
+                  <th scope="col">Marks Awarded</th>
                   <th scope="col">Percentage</th>
-                  <th scope="col">Total Mark</th>
                 </tr>
               </thead>
               <tbody>
